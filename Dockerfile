@@ -5,7 +5,7 @@ RUN yum -y install epel-release yum -y update && yum clean all
 
 RUN yum -y install tar supervisor
 
-RUN curl -L https://github.com/kelseyhightower/confd/releases/download/v0.6.3/confd-0.6.3-linux-amd64 -o /usr/bin/confd && chmod u+x /usr/bin/confd
+RUN curl -L https://github.com/kelseyhightower/confd/releases/download/v0.7.1/confd-0.7.1-linux-amd64 -o /usr/bin/confd && chmod u+x /usr/bin/confd
 RUN mkdir -p /etc/confd/{conf.d,templates}
 
 ADD files/boot.sh /usr/bin/boot.sh
