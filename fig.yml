@@ -1,2 +1,7 @@
 confd:
-  build: .
+  image: dlip/centos7-confd
+etcd:
+  image: coreos/etcd:v0.4.6
+  command: ["-name", "docker", "-addr", "172.17.42.1:4001", "-bind-addr", "0.0.0.0"]
+  ports:
+    - "4001:4001"

@@ -17,6 +17,6 @@ echo "[confd] booting container. ETCD: $ETCD"
 
 # Run confd in the background to watch the upstream servers
 #confd -interval 10 -node $ETCD -config-file /etc/confd/conf.d/nginx.toml &
-echo "[confd] listening for changes on etcd..."
+#echo "[confd] listening for changes on etcd..."
 
 exec /usr/bin/supervisord -c /etc/supervisord.conf
